@@ -1,0 +1,541 @@
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "Quantum";
+  src: url("../fonts/Quantum.otf");
+}
+
+.logo {
+  font-family: "Quantum", Arial, Helvetica, sans-serif;
+  color: #072752;
+
+  font-size: 42px;
+}
+
+.logo-img {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.logo:link {
+  color: #072752;
+  text-decoration: none;
+}
+
+.nav-link {
+  font-family: "Quantum", Arial, Helvetica, sans-serif;
+  color: #072752;
+  margin-right: 2px;
+  font-size: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body {
+  background-color: #072752;
+  color: white;
+}
+
+/* home page*/
+
+.carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  /* text-shadow: 3px 2px black; */
+}
+
+.carousel-caption {
+ margin-bottom:0px;
+ padding-bottom:0px;
+  z-index:10;
+  color: rgb(1, 119, 155);
+  text-align:center;
+  top:80%;
+  left:20%;
+  bottom:auto;
+  -webkit-transform:translate(0, -50%);
+  -ms-transform:translate(0, -50%);
+  transform:translate(0, -50%);
+  }
+
+  .headline {
+    text-align: center;
+    border: hidden;
+    border-width: 5px;
+    margin-top: 150px;
+    padding: 50px 200px;
+    color: rgb(0, 204, 255);
+    text-shadow: 1px 1px black;
+
+  }
+
+.display-4  {
+color: white;
+font-weight: bold;
+text-shadow: 2px 2px black;
+
+}
+
+.lead {
+  margin-top: 0px;
+  padding-top: 0px;
+  color: white;
+  font-weight: bold;
+  text-shadow: 2px 2px black;
+
+
+}
+
+/* messages */
+
+#messages {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  z-index: 9;
+}
+
+/* admin tabs */
+.nav-pills {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.nav-pills a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  margin-right: 2px;
+  font-size: 18px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* form css*/
+
+#error-info {
+  color:red;
+}
+.signup-form {
+  margin-top: 25px;
+}
+
+.login-form {
+  margin-top: 150px;
+}
+
+.user-form {
+  margin-top: 100px;
+}
+
+.member {
+  margin-top: 150px;
+}
+
+.signup-link,
+.login-link {
+  color: #072752;
+  text-decoration: underline;
+}
+
+.member-name {
+  color: white;
+  margin-bottom: 10px;
+}
+
+.search-text {
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 5px;
+  margin-top: 0px;
+}
+
+.card {
+  color: #072752;
+}
+
+.members-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+.pass-header,
+.acct-header {
+  margin-bottom: 10px;
+}
+
+.signup-btn {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.login-btn {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding-bottom: 0px;
+}
+
+/* Spinner */
+
+#loading {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+  color: #072752;
+}
+
+#loadingcontent {
+  display: table;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#loadingspinner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  text-align: center;
+  font-size: 24px;
+  padding-top: 100px;
+  z-index: 1000;
+}
+
+@keyframes spinner-line-fade-more {
+  0%,
+  100% {
+    opacity: 0; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-line-fade-quick {
+  0%,
+  39%,
+  100% {
+    opacity: 0.25; /* minimum opacity */
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes spinner-line-fade-default {
+  0%,
+  100% {
+    opacity: 0.22; /* minimum opacity */
+  }
+  1% {
+    opacity: 1;
+  }
+}
+
+/* card details start  */
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto+Condensed:400,400i,700,700i");
+section {
+  padding: 100px 0;
+}
+
+#features {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+.details-card {
+  background: #ecf0f1;
+
+}
+
+.card-content {
+	background: rgba(0, 0, 0, 0.712);
+	border: 4px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+.card-img {
+	position: relative;
+	overflow: hidden;
+	border-radius: 1;
+  z-index: 1;
+  border-style: solid;
+  border-width: 3px;
+  border-color: rgba(0, 0, 0, 0.712);
+}
+
+.card-img img {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+  display: block;
+}
+
+.card-img span {
+  position: absolute;
+  top: 15%;
+  left: 12%;
+  background: #1abc9c;
+  padding: 6px;
+  color: #fff;
+  font-size: 12px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  transform: translate(-50%, -50%);
+}
+.card-img span h4 {
+  font-size: 12px;
+  margin: 0;
+  padding: 10px 5px;
+  line-height: 0;
+}
+.card-desc {
+	padding: 1.25rem;
+  	width: 100%;
+    height: 40vh;
+    background-color: rgba(0, 0, 0, 0.486);
+}
+
+.card-desc h3 {
+	color: rgb(0, 204, 255);
+    font-weight: 600;
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-top: 0;
+    margin-bottom: 25px;
+    padding: 0;
+    text-align: center;
+}
+
+.card-desc p {
+	color: rgb(0, 204, 255);
+    font-size: 14px;
+	font-weight: 400;
+	font-size: 1em;
+	line-height: 1.5;
+	margin: 0px;
+	margin-bottom: 20px;
+	padding: 0;
+	font-family: 'Raleway', sans-serif;
+}
+
+/* End card section */
+
+/* Featured testimonials section */
+
+#featuredTestimonials {
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 50px;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+  border-radius: 50px;
+  height: 200px;
+  text-align: center;
+  margin-bottom: 25px;
+  border-style: hidden;
+  border-width: 1px;
+  padding: 30px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-top-color: #00aabb;
+	border-bottom: 0;
+	margin-left: -20px;
+	margin-bottom: -20px;
+}
+
+.speech-bubble p {
+  text-align: center;
+  font-size: 16px;
+}
+
+.speech-bubble h3 {
+  text-align: center;
+  margin-top: 50px;
+  border-style: hidden;
+  border-width: 1px;
+
+}
+
+
+/* Featured testimonials section ends */
+
+/* Contact Form */
+
+section#contactForm {
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: hidden;
+  border-width: 1px;
+  padding: 150px;
+}
+
+section#contactForm p {
+padding-top: 10px;
+padding-bottom: 50px;
+font-size: 18px;
+}
+
+section#contactInfo {
+  padding-bottom: 100px;
+}
+
+/* View rooms */
+
+.search-box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.roomPhoto {
+  height: 150px;
+  width: 200px;
+  border: 1px solid lightslategray;
+}
+
+.room-card {
+  float: left;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  width: 200px;
+}
+.room-card-body {
+  padding: 5px 5px 5px 10px;
+}
+
+p {
+  font-size: 12px;
+  margin-bottom: 0px;
+}
+
+li {
+  font-size: 12px;
+}
+
+.list-group-item {
+  padding: 5px 5px 5px 10px;
+}
+
+.hour-block {
+  background-color: #072752;
+  height: 50px;
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 10px;
+  color: white;
+  border: 1px solid darkgray;
+}
+
+.meeting-details {
+  background-color: #dbf3fa;
+  height: 50px;
+  border: 1px solid darkgray;
+  text-align: left;
+
+  color: black;
+}
+
+.res-card-body {
+  width: 600px;
+  margin: 0 auto 0 auto;
+}
+
+.room-thumb {
+  height: 75px;
+  width: 125px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.modal-title {
+  color: #072752;
+}
+
+.modal-room-card-body,
+.modal-room-card,
+.modal-room-photo {
+  width: 450px;
+}
+
+.modal-room-photo {
+  height: 250;
+}
+
+
+/* update reservation css */
+
+.modal-body {
+  color: #072752;
+}
+
+#res-hh-input {
+  width: 75px;
+}
+
+#res-mm-input {
+  width: 75px;
+}
+
+.res-hour {
+  padding-left: 0px;
+}
+
+#res-day {
+  border: 0px;
+}
+
+#show-res-modal {
+  width: 400px;
+
+  left: 30%;
+}
+
+.modal-header,
+.modal-footer {
+  background-color: #072752;
+}
+
+.modal-title {
+  color: white;
+}

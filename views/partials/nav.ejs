@@ -1,0 +1,81 @@
+<!-- views/partials/nav.ejs -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+  <div class="container">
+    <a class="logo " href="/">Fle<img src="../images/spinner3.gif" />Space</a>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/"
+            >Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <% if (typeof user !== 'undefined' && user.isAdmin) {%>
+        <li class="nav-item">
+          <a class="nav-link" id="console" href="/admin">admin console</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="logout" href="/logout">logout</a>
+        </li>
+        <%} else if (typeof user !== 'undefined' && !user.isAdmin) {%>
+        <li class="nav-item">
+          <a class="nav-link" id="myDashboard" href="/members">dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="manage" href="/user/<%=user.id%>"
+            > account</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="logout" href="/logout">logout</a>
+        </li>
+        <%} else if (script === "home") {%>
+          <li>
+              <a class="nav-link" id="about" href="/about">about</a>
+            </li>
+
+            <li class="nav-item">
+              <!-- Add #contact -->
+              <a class="nav-link" href="#contactForm">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="signup" href="/signup">signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="login" href="/login">login</a>
+            </li>
+
+        <%} else {%>
+        <li>
+          <a class="nav-link" id="about" href="/about">about</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="signup" href="/signup">signup</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="login" href="/login">login</a>
+        </li>
+        <%}%>
+      </ul>
+    </div>
+  </div>
+</nav>
+<% include messages %>
+

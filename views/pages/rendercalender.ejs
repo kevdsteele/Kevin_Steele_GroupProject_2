@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <% include ../partials/head.ejs %>
+    
+  </head>
+  <% include ../partials/nav.ejs %>
+  <div class="container member mx-auto">
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>Welcome <span class="member-name"></span></h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="card ">
+      <div class="card-header text-center" id="cal-room-name">
+      
+      </div>
+      <div class="container card-body text-center" >
+            <div class="card-header text-center" id="res-header">
+      
+            </div>
+
+            <div class="container row">
+                <div class="col-md-3 mt-2" id="res-form">
+                    <form>
+                            <div class="form-group row ">
+                                    <label for="res-date-input" class=" col-form-label">Reservation Date</label>
+                                    <div class="">
+                                      <input class="form-control" type="date" value="2019-08-19" id="res-date-input">
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group row">
+                                       
+
+                                      
+                                      <label class="" for="res-dur-input">Reservation Time</label>
+
+                                        <div class="form-group row ">
+
+                                        <div class="form-group col-md-4 pl-3 pr-0 ">
+                                            <select class="custom-select " id="res-hh-input">
+                                              <option selected>HH</option>
+                                              <option value="08">08</option>
+                                              <option value="09">09</option>
+                                              <option value="10">10</option>
+                                              <option value="11">11</option>
+                                              <option value="12">12</option>
+                                              <option value="13">01</option>
+                                              <option value="14">02</option>
+                                              <option value="15">03</option>
+                                              <option value="16">04</option>
+                                              <option value="17">05</option>
+                                              <option value="18">06</option>
+                                              <option value="19">07</option>
+                                              <option value="20">08</option>
+                                              <option value="21">09</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="form-group col-md-3 pl-0 ">
+
+                                            <input class="form-control" type="text" placeholder="00" readonly>
+                                            
+                                         </div>
+
+                                          </div>
+
+                                    </div>
+
+                                      <div class="form-group row">
+                                      <label class="" for="res-dur-input">Reservation Duration</label>
+                                      <select class="custom-select " id="res-dur-input">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One hour</option>
+                                        <option value="2">Two hours</option>
+                                        <option value="3">Three hours</option>
+                                        <option value="4">Four hours</option>
+                                        <option value="5">Five hours</option>
+                                        <option value="6">Six hours</option>
+                                        <option value="7">Seven hours</option>
+                                        <option value="8">Eight hours</option>
+                                        
+                                      </select>
+                                      </div>
+                                      
+
+                                      <div class="form-group row">
+                                        <label for="res-text-input">Reservation details</label>
+                                        <textarea class="form-control" id="res-text-input" rows="2"></textarea>
+                                      </div>
+                                 
+                                      <div class="form-group row">
+                                      <button id="upd-search" class="btn btn-dark"> Update Search</button> 
+                                      </div>
+                                      <div class="form-group row">
+                                      <button  id="res-now" class="btn btn-dark">Reserve Now</button>
+                                      </div>
+                  </form>
+
+                </div>
+
+                <div class="col-md-9" id="reservation-render">
+
+                </div>
+            </div>
+      
+      </div>
+      <div class="card-footer text-center">
+      
+      </div>
+    </div>
+  </div>
+
+
+            <!-- Modal for Res Del -->
+
+                    
+            <div class="modal fade" id="meeting-conflict-modal" tabindex="-1" role="dialog" aria-labelledby="meeting-conflict-modal" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title"id="modal-room-name">Meeting Conflict</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body justify-content-center" id="meeting-conflict-info">
+                        
+                        There is a meeting conflict. Please adjust your meeting times or search for another room.
+                            
+  
+                           
+                          
+                    </div>
+                    <div class="modal-footer">
+                     
+                      <button type="button" id="conflict-close" class="btn btn-secondary modal-btn" data-dismiss="modal">Close</button>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="../../js/rendercalender.js"></script>
+  <% include ../partials/calfooter.ejs %>
+</html>
+
+

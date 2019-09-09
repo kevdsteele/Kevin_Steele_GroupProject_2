@@ -1,0 +1,203 @@
+<html>
+  <head>
+    <% include ../partials/head.ejs %>
+
+  </head>
+  <% include ../partials/nav.ejs %>
+  <div class="container member mx-auto">
+
+    <div class="row text-center">
+      <div class="col-md-12">
+        <h2>List Your Conference Room</h2>
+      </div>
+    </div>
+
+
+
+  <div class="container">
+      <div id="loading">
+          <div id="loadingcontent">
+
+              <p id="loadingspinner">
+                  Adding Room...sending 0s and 1s
+
+              </p>
+
+          </div>
+      </div>
+
+    <div class="card signup-form w-75 mx-auto">
+
+      <div class="card-header text-center">
+        Conference Room Information
+      </div>
+
+      <div class="card-body">
+
+        <form id="add-room" class="signup">
+
+          <div class="form-row d-block">
+
+
+
+            <div class="form-row">
+
+              <div class="form-group col-md-6 ">
+                <label for="room-input">Room Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="room-input"
+                  placeholder="Room Name"
+                />
+              </div>
+
+              <div class="form-group col-md-6 ">
+                <label for="capacity-input">Capacity</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="capacity-input"
+                  placeholder="Capacity"
+                />
+              </div>
+
+            </div>
+
+            <div class="form-row d-block">
+            <div class="form-group col-md-12">
+              <label for="room-url-input">Room URL</label>
+              <input
+                type="text"
+                class="form-control"
+                id="room-url-input"
+                placeholder="Room picture URL"
+              />
+            </div>
+
+          </div>
+
+            <div class="form-row">
+
+                <div class="form-group col-md-6 ">
+                    <label for="room-type-input">Room Type</label>
+                    <select id="room-type-input" class="form-control">
+                      <option>Room Type</option>
+                      <option value="large"
+                        >Large Conference</option
+                      >
+                      <option value="medium"
+                        >Medium Conference</option
+                      >
+                      <option value="huddle"
+                        >Huddle Room</option
+                      >
+                      <option value="office"
+                        >Office</option
+                      >
+                    </select>
+                  </div>
+
+              <div class="form-group col-md-6">
+                <label for="room-rate-input">Room Rate</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="room-rate-input"
+                  placeholder="Room Rate"
+                />
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="form-row d-block">
+
+
+
+            <div class="form-row">
+
+
+
+              <div class="form-group col-md-6">
+                <label for="room-phone-input">Room Contact Phone Number</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="room-phone-input"
+                  placeholder="Room contact phone number"
+                />
+              </div>
+
+            </div>
+
+          <div class="form-row d-block">
+
+          <div class="form-group">
+            <label for="address1-input">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address1-input"
+              placeholder="1234 Main St"
+            />
+          </div>
+
+          </div>
+
+          <div class="form-row d-block">
+
+          <div class="form-group">
+            <label for="address2-input">Address 2</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address2-input"
+              placeholder="Apartment, studio, or floor"
+            />
+          </div>
+
+          </div>
+
+          <div class="form-row">
+
+            <div class="form-group col-md-6">
+              <label for="city-input">City</label>
+              <input type="text" class="form-control" id="city-input" placeholder="City"/>
+            </div>
+
+            <div class="form-group col-md-4">
+              <label for="state-input">State</label>
+              <select id="state-input" class="form-control">
+                <option>Choose...</option>
+                <option value="DC">DC</option>
+                <option value="MD">MD</option>
+                <option value="VA">VA</option>
+              </select>
+            </div>
+
+            <div class="form-group col-md-2">
+              <label for="zip-input">Zip</label>
+              <input type="text" class="form-control" id="zip-input" placeholder="Zip code"/>
+            </div>
+
+          </div>
+
+          <button type="submit" id="add-room-btn" class="btn btn-dark add-room-btn">Add Room</button>
+        </form>
+
+      </div>
+
+   </div>
+
+   <div class="card-footer">
+
+    </div>
+
+  </div>
+
+  <!--End outer-->
+  </div>
+  <% include ../partials/footer.ejs %>
+</html>
